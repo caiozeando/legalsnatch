@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Lawline - Avaliação</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<body>
+  <header>
+    <div class="navbar box-shadow" style="background-color: #0082ff;">
+      <div class="container d-flex justify-content-between">
+        <a href="#" class="navbar-brand d-flex align-items-left" style="color: #fff;">
+          <img src="lawline_branco.png" width="150" height="50">
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main role="main">
+
+    <section class="container">
+      <div class="row">
+        <form>
+          <div class="form-group">
+            <label for="nome">Seu Nome</label>
+            <input type="text" class="form-control" id="nome" placeholder="Nome">
+          </div>
+          <div class="form-group">
+            <label for="email">Seu Email</label>
+            <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
+              placeholder="Email">
+          </div>
+          <div class="form-group">
+              <label for="nota">Sua Nota</label>
+              <input type="number" class="form-control" id="nota" placeholder="\Nota">
+            </div>
+          <button type="submit" onclick="sendEmail()" class="btn btn-primary">Submit</button>
+          
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Bootstrap core JavaScript
+    ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+  <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+  <script src="https://smtpjs.com/v3/smtp.js">
+  </script>
+  
+  <script>
+      function sendEmail() {
+        var nome = document.getElementById('nome').value;
+        var email = document.getElementById('email').value;
+        var nota = document.getElementById('nota').value;
+
+        var msg = "";
+        msg += "Nome: "+ nome + " \n";
+        msg += "Email: "+ email+ " \n";
+        msg += "Nota: "+ nota+ " \n";
+
+        Email.send({
+          Host: "smtp.gmail.com",
+          Username: "rodrigoventuri123@gmail.com",
+          Password: "@venturi123",
+          To: 'rodrigoventuri123@gmail.com',
+          From: "venturiqw@gmail.com",
+          Subject: "MAIS UM RESPOSTA",
+          Body: msg
+        }).then(
+          message => alert(message)
+        );
+      }
+    </script>
+</body>
+
+</html>
