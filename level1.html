@@ -48,18 +48,25 @@
 		  position: absolute;
 		}
 
-		.flip .face.back.success {
+		.flip .face.back.success,
+		.flip .face.back.success .card-body {
 			background-color: #82ea8c;
 		}
 
-		.flip .face.back.error {
+		.flip .face.back.error,
+		.flip .face.back.error .card-body{
 			background-color: #f1adea;
 		}
 
 		.inner{
 			height: 100%;
 			text-align: center;
+			height: 100%;
+		    display: flex;
+		    justify-content: center;
+		    align-items: center;
 		}
+
     </style>
   </head>
 
@@ -67,7 +74,7 @@
   	<header>
       <div class="navbar box-shadow" style="background-color: #0082ff;">
         <div class="container d-flex justify-content-between">
-          <a href="#" class="navbar-brand d-flex align-items-left" style="color: #fff;">
+          <a href="index.html" class="navbar-brand d-flex align-items-left" style="color: #fff;">
             <img src="lawline_branco.png" width="150" height="50">
           </a>
         </div>
@@ -158,6 +165,8 @@
         </div>
     </section>
     </main>
+
+    <footer style="padding: 5%;"></footer>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
