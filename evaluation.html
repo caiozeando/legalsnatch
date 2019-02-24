@@ -24,21 +24,47 @@
     <section class="container">
       <div class="form-row">
         <div class="form-group col-md-12">
-          <div class="card" style="width: 500px; left: 300px; top: 35px;border-color: #fff;">
+          <div class="card" style="width: 700px; left: 300px; top: 35px;border-color: #fff;">
             <div class="card-body">
               <div class="row">
                 <form>
-                  <img src="planos.jpeg" class="card-img-top" alt="Legalsnatch">
-                  <div class="form-group">
-                    <label for="nome">Seu Nome</label>
-                    <input type="text" class="form-control" id="nome" placeholder="Nome">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="nome">Seu Nome</label>
+                        <input type="text" class="form-control" id="nome" placeholder="Nome">
+                      </div>
+                      <div class="form-group">
+                        <label for="email">Seu Email</label>
+                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
+                          placeholder="Email">
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox"  id="compra">
+                        <label class="form-check-label" for="defaultCheck1">
+                          Alterar o texto....
+                        </label>
+                      </div>
+                      <button type="submit" onclick="sendEmail()" class="btn btn-primary">Enviar</button>
+
+                    </div>
+                    <div class="col-md-6">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <img src="versaobeta.png" style="height: 190px;" class="card-img-top" alt="Legalsnatch">
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <img src="estudante.png" class="card-img-top" alt="Legalsnatch">
+                        </div>
+                        <div class="col-md-6">
+                          <img src="universidade.png" class="card-img-top" alt="Legalsnatch">
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div class="form-group">
-                    <label for="email">Seu Email</label>
-                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
-                      placeholder="Email">
-                  </div>
-                  <button type="submit" onclick="sendEmail()" class="btn btn-primary">Enviar</button>
+
 
                 </form>
               </div>
@@ -67,21 +93,26 @@
     function sendEmail() {
       var nome = document.getElementById('nome').value;
       var email = document.getElementById('email').value;
-      var nota = document.getElementById('nota').value;
-      var observacao = document.getElementById('observacao').value;
+      var compra = document.getElementById('compra').checked;
+
+      var buy = '';
+      if(compra) {
+        buy = "Sim";
+      } else {
+        buy = "Não";
+      }
 
       var msg = "";
       msg += "Nome: " + nome + " \n";
       msg += "Email: " + email + " \n";
-      msg += "Nota: " + nota + " \n";
-      msg += "Observações: " + observacao + " \n";
+      msg += "compra: " + buy + " \n";
 
       Email.send({
         Host: "smtp.gmail.com",
         Username: "rodrigoventuri123@gmail.com",
         Password: "@venturi123",
-        To: 'rodrigoventuri123@gmail.com',
-        From: "venturiqw@gmail.com",
+        To: 'testelegaljaragua@gmail.com',
+        From: "rodrigoventuri123@gmail.com",
         Subject: "MAIS UM RESPOSTA",
         Body: msg
       }).then(
