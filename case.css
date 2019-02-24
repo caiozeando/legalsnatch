@@ -28,17 +28,26 @@
 	width: 50%;
 }
 .img-menu{
-	height: 400px;
+	height: 450px;
 	width: 260px;
 }
 .img-position {
 	position: relative;
-	padding-right: 15px;
-    padding-left: 15px;
+	padding-right: 30px;
+    padding-left: 30px;
 }
 
 .button-menu {
 	display: inline-block;
 	width: 20%;
 	height: 80%;
+}
+
+.menu-fundo{
+	padding: 4rem 2rem;
+	margin-bottom: 2rem;
+	border-radius: .3rem;
+}
+.button-img{
+	padding: 0px;
 }
