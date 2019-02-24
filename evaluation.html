@@ -40,13 +40,13 @@
                           placeholder="Email">
                       </div>
                       <div class="form-check">
-                        <input class="form-check-input" type="checkbox"  id="compra">
+                        <input class="form-check-input" type="checkbox" id="compra">
                         <label class="form-check-label" for="defaultCheck1">
                           Alterar o texto....
                         </label>
                       </div>
-                      <button onclick="sendEmail()" class="btn btn-primary">Enviar</button>
-
+                      <br />
+                      <a style="width: 335px;" href="javascript:sendEmail()" class="btn btn-primary">Enviar</a>
                     </div>
                     <div class="col-md-6">
                       <div class="row">
@@ -96,7 +96,7 @@
       var compra = document.getElementById('compra').checked;
 
       var buy = '';
-      if(compra) {
+      if (compra) {
         buy = "Sim";
       } else {
         buy = "Não";
