@@ -1,0 +1,53 @@
+.button-item {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding: .375rem .75rem;
+    font-size: 1rem;
+	line-height: 1.5;
+	font-size: 20px;
+	background-color:#007bff;
+	border-color:#007bff;
+	color: white;
+	margin-top:30px;
+}
+
+.title {
+	text-align: center;
+}
+
+.no-padding {
+	padding-top: 10px;
+}
+
+.img-case {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	height: 50%;
+	width: 50%;
+}
+.img-menu{
+	height: 450px;
+	width: 260px;
+}
+.img-position {
+	position: relative;
+	padding-right: 30px;
+    padding-left: 30px;
+}
+
+.button-menu {
+	display: inline-block;
+	width: 20%;
+	height: 80%;
+}
+
+.menu-fundo{
+	padding: 4rem 2rem;
+	margin-bottom: 2rem;
+	border-radius: .3rem;
+}
+.button-img{
+	padding: 0px;
+}

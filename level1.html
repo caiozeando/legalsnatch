@@ -5,6 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Lawline - Level 1</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  
+    <style type="text/css">
+    	
+		.flip {
+		  -webkit-perspective: 800;   
+		          perspective: 800;
+		        position: relative;
+		        text-align: center;
+		}
+		.flip .card.flipped {
+		  -webkit-transform: rotatey(-180deg);
+		          transform: rotatey(-180deg);
+		}
+		.flip .card {
+		    width: 270px;
+		    height: 178px;
+		    -webkit-transform-style: preserve-3d;
+		    -webkit-transition: 0.5s;
+		    transform-style: preserve-3d;
+		    transition: 0.5s;
+		    background-color: #fff;
+		   
+		}
+
+		.flip .card .face {
+		  -webkit-backface-visibility: hidden ;
+		    backface-visibility: hidden ;
+		   z-index: 2;
+		}
+		
+		.flip .card .front {
+		   position: absolute;
+		   z-index: 1;
+		}
+		
+		.flip .card .back {
+			height: 100%;
+		  -webkit-transform: rotatey(-180deg);
+		          transform: rotatey(-180deg);
+		  position: absolute;
+		}
+		.inner{
+		  margin:0px !important;
+		  width: 270px;
+		}
+
+		.flip .face.back.success {
+			background-color: #82ea8c;
+		}
+
+		.flip .face.back.error {
+			background-color: #f1adea;
+		}
+    </style>
   </head>
 
   <body>
@@ -28,37 +82,73 @@
 
     <section class="container">
     	<div class="row">
-          <div class="col-lg-4 option-one">
-           <div class="card mb-3">
-			  <div class="card-body">
-			    <h5 class="card-title">Lorem ipsum dolor</h5>
-			    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque convallis risus libero, non ornare nisl cursus vestibulum..</p>
-			  </div>
-			</div>
-          </div><!-- /.col-lg-4 -->
-          
-          <div class="col-lg-4 option-two">
-           <div class="card mb-3">
-			  <div class="card-body">
-			    <h5 class="card-title">Lorem ipsum dolor</h5>
-			    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque convallis risus libero, non ornare nisl cursus vestibulum..</p>
-			  </div>
+          <div class="col-lg-4">
+           <div class="flip">
+			    <div class="card"> 
+			        <div class="face front"> 
+			            <div class="inner">   
+			              	<div class="card-body">
+							    <h5 class="card-title">Frente</h5>
+							    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet</p>
+							</div>
+			            </div>
+			        </div> 
+			        <div class="face back error"> 
+			            <div class="inner text-center"> 
+			            	<div class="card-body">
+							    <h5 class="card-title">Verso</h5>
+							    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+							</div>
+			            </div>
+			        </div>
+			    </div>	 
 			</div>
           </div><!-- /.col-lg-4 -->
           
           <div class="col-lg-4">
-          	<div class="card mb-3 option-three">
-			  <div class="card-body">
-			    <h5 class="card-title">Lorem ipsum dolor</h5>
-			    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque convallis risus libero, non ornare nisl cursus vestibulum..</p>
-			  </div>
+           <div class="flip">
+			    <div class="card"> 
+			        <div class="face front"> 
+			            <div class="inner">   
+			              	<div class="card-body">
+							    <h5 class="card-title">Frente</h5>
+							    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet</p>
+							</div>
+			            </div>
+			        </div> 
+			        <div class="face back error"> 
+			            <div class="inner text-center"> 
+			            	<div class="card-body">
+							    <h5 class="card-title">Verso</h5>
+							    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet</p>
+							</div>
+			            </div>
+			        </div>
+			    </div>	 
 			</div>
-            <div class="card mb-3 option-three-back">
-			  <div class="card-body">
-			    <h5 class="card-title">Parabéns!</h5>
-			    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque convallis risus libero, non ornare nisl cursus vestibulum..</p>
-			  	<button class="btn btn-success">Passar para a próxima etapa!</button>
-			  </div>
+          </div><!-- /.col-lg-4 -->
+          
+          <div class="col-lg-4">
+          	<div class="flip">
+			    <div class="card"> 
+			        <div class="face front"> 
+			            <div class="inner">   
+			              	<div class="card-body">
+							    <h5 class="card-title">Frente</h5>
+							    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet</p>
+							</div>
+			            </div>
+			        </div> 
+			        <div class="face back success"> 
+			            <div class="inner text-center"> 
+			            	<div class="card-body">
+							    <h5 class="card-title">Verso</h5>
+							    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+							    <button class="btn btn-success">Passar para a próxima etapa!</button>
+							</div>
+			            </div>
+			        </div>
+			    </div>	 
 			</div>
           </div>
         </div>
@@ -71,5 +161,11 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
     <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+    	$('.flip').click(function(){
+		        $(this).find('.card').toggleClass('flipped');
+		 });
+    </script>
   </body>
 </html>
