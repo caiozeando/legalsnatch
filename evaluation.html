@@ -12,8 +12,8 @@
   <header>
     <div class="navbar box-shadow" style="background-color: #0082ff;">
       <div class="container d-flex justify-content-between">
-        <a href="#" class="navbar-brand d-flex align-items-left" style="color: #fff;">
-          <img src="lawline_branco.png" width="150" height="50">
+        <a href="index.html" class="navbar-brand d-flex align-items-left" style="color: #fff;">
+          <img src="laway_branco.png" width="150" height="50">
         </a>
       </div>
     </div>
@@ -25,6 +25,7 @@
       <div class="form-row">
         <div class="form-group col-md-12">
           <div class="card" style="width: 700px; left: 300px; top: 35px;border-color: #fff;">
+            <h1 for="comment" style="color:#007bff;">Parabéns você concluiu com sucesso!!!</h1>
             <div class="card-body">
               <div class="row">
                 <form>
@@ -39,24 +40,23 @@
                         <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
                           placeholder="Email">
                       </div>
+                      <div class="form-group">
+                        <label for="comment">Deixe seu feedback</label>
+                        <textarea class="form-control" rows="5" id="comment"></textarea>
+                      </div>
                       <div class="form-check">
                         <input class="form-check-input" type="checkbox" id="compra">
                         <label class="form-check-label" for="defaultCheck1">
-                          Alterar o texto....
+                          Declaro interesse em contratar o serviço assim que lançado oficialmente como APP nas lojas oficiais de aplicativos.
                         </label>
                       </div>
                       <br />
-                      <a style="width: 335px;" href="javascript:sendEmail()" class="btn btn-primary">Enviar</a>
+                      <a style="width: 335px;" href="javascript:sendEmail()" class="btn btn-primary">Confirmar</a>
                     </div>
                     <div class="col-md-6">
                       <div class="row">
-                        <div class="col-md-12">
-                          <img src="versaobeta.png" style="height: 190px;" class="card-img-top" alt="Legalsnatch">
-                        </div>
-                      </div>
-                      <div class="row">
                         <div class="col-md-6">
-                          <img src="estudante.png" class="card-img-top" alt="Legalsnatch">
+                          <img src="usuário.png" class="card-img-top" alt="Legalsnatch">
                         </div>
                         <div class="col-md-6">
                           <img src="universidade.png" class="card-img-top" alt="Legalsnatch">
@@ -94,6 +94,7 @@
       var nome = document.getElementById('nome').value;
       var email = document.getElementById('email').value;
       var compra = document.getElementById('compra').checked;
+      var obs = document.getElementById('comment').value;
 
       var buy = '';
       if (compra) {
@@ -106,6 +107,7 @@
       msg += "Nome: " + nome + " \n";
       msg += "Email: " + email + " \n";
       msg += "compra: " + buy + " \n";
+      msg += "Observação: " + obs +  " \n";
 
       Email.send({
         Host: "smtp.gmail.com",
@@ -116,7 +118,7 @@
         Subject: "MAIS UM RESPOSTA",
         Body: msg
       }).then(
-        message => alert(message)
+        message => alert('Entraremos em contato assim que a ferramenta for liberada oficialmente.')
       );
     }
   </script>
